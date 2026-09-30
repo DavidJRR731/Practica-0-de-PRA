@@ -1,0 +1,48 @@
+using namespace std;
+class RoboticArm{
+	private:
+		double x,y,z;
+		bool sujetado;
+	public:
+
+	RoboticArm(double _x,double _y,double _z,bool sujetado_){
+		x= _x;
+		y= _y;
+		z= _z;
+		sujetado=sujetado_;
+	
+	}
+
+	double getX(){
+		return x;
+	}
+
+	double getY(){
+		return y;
+	}
+
+	double getZ(){
+		return z;
+	}
+
+	bool  getsuejtado(){
+		return sujetado;
+	}
+
+
+        void  grab(){
+		sujetado=true;
+	}
+
+	void release(){
+		sujetado=false;
+	}
+
+	void  move(double x,double y,double z){
+	this->x=x;
+	this->y=y;
+	this->z=z;
+	}
+};
+		
+
